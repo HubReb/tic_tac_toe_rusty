@@ -361,7 +361,12 @@ pub mod tic_tac_toe {
 
             let center = ((app::screen_size().0 / 2.0) as i32, (app::screen_size().1 / 2.0) as i32);
             let difficulty_message = "Choose difficulty".to_string();
-            let difficulty = dialog::choice(center.0 - 200, center.1 - 100, &difficulty_message, "Easy", "Challenge", "Hard");
+            let difficulty = dialog::choice2(center.0 - 200, center.1 - 100, &difficulty_message, "Easy", "Challenge", "Hard");
+            let mut chosen_difficulty = 0;
+            match difficulty {
+                Some(d) => {chosen_difficulty = d;},
+                None => {dialog::alert(center.0 - 200, center.1 - 100, "Difficulty was set to easiest because you did not choose a difficulty yourself.")},
+            };
             while app.wait() {
                 if cats_game(&board) {
                     println!("Cats game! Remis!");
@@ -391,7 +396,7 @@ pub mod tic_tac_toe {
                         break;
                     }
                     if turn < last_turn {
-                        ai_move(&mut board, &mut but_vectors, difficulty);
+                        ai_move(&mut board, &mut but_vectors, chosen_difficulty);
                     }
                     results = someone_has_won(&board);
                     turn += 1;
@@ -427,10 +432,15 @@ pub mod tic_tac_toe {
                     _ => {},
                 }
                 let status_message = format!("Current Status:\nPlayer won {} games\n AI won {} games\n {} cat games\nStart a new game? ", stat_player, stat_ai, stat_remis);
-                let answer = dialog::choice(center.0 - 200, center.1 - 100, &status_message, "Yes", "No", "");
+                let answer = dialog::choice2(center.0 - 200, center.1 - 100, &status_message, "Yes", "No", "");
                 match answer {
-                        1 =>  new_game = false,
-                        _ => continue,
+                        Some(a) => {
+                            match a {
+                               1  =>  new_game = false,
+                                _ => continue,
+                            }
+                        }
+                        None => new_game = false
                 }
             }
         }
