@@ -18,6 +18,7 @@ Among others, the original implementation was severly rewritten, most noteable c
 
 ## Installation
 
-Simply run `cargo build --release` followed by `cargo run
+Simply run `cargo build --release` followed by `cargo run`.
+
 ## State of the Code
 This small project was done to improve my skills in Rust. The code was written in Dec, 2021, and reflects my skills at that time.
