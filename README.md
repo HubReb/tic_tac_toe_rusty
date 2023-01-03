@@ -2,7 +2,7 @@
 
 A simple Tic-Tac-Toe game with a basic GUI.
 
-This was inspired by the command line Tic-Tac-Toe game with a simple AI that introduced in the free tutorial hosted [here][https://brandonio21.com/building-tic-tac-toe-in-rust-rustic_tac_toe/] by [Brandon Milton][https://github.com/brandonio21].
+This was inspired by the command line Tic-Tac-Toe game with a simple AI that introduced in the free tutorial hosted [here](https://brandonio21.com/building-tic-tac-toe-in-rust-rustic_tac_toe/) by [Brandon Milton](https://github.com/brandonio21).
 All credit for the idea and basic AI logic goes to the *original author*.
 
 This implementation was created by first following along the free tutorial and then implementing several additions and re-implementing several different parsts. 
