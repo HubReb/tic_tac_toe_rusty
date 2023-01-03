@@ -16,3 +16,5 @@ Among others, the original implementation was severly rewritten, most noteable c
  * test added
  * added different difficulties
 
+## State of the Code
+This small project was done to improve my skills in Rust. The code was written in Dec, 2021, and reflects my skills at that time.
