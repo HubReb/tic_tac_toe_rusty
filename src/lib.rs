@@ -401,7 +401,7 @@ pub mod tic_tac_toe {
                     results = someone_has_won(&board);
                     turn += 1;
                     if results.0 {
-                        app.quit();
+                       break; 
                     }
                 }
             }
@@ -412,6 +412,7 @@ pub mod tic_tac_toe {
                 Field::Free => {count = 0; "Noone"},
             };
             dialog::message(center.0 - 300, center.1 - 100, winner_message);
+            app.quit();
             count
         }
 
