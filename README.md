@@ -5,15 +5,15 @@ A simple Tic-Tac-Toe game with a basic GUI.
 This was inspired by the command line Tic-Tac-Toe game with a simple AI that is introduced in [this free tutorial](https://brandonio21.com/building-tic-tac-toe-in-rust-rustic_tac_toe/) by [Brandon Milton](https://github.com/brandonio21).
 All credit for the idea goes to the *original author*.
 
-This implementation was created by first following along the free tutorial and then implementing several additions and re-implementing several different parsts. 
-Among others, the original implementation was severly rewritten, most noteable changes include:
+This implementation was created by first roughly following the free tutorial, then re-implementing with thorough changes and adding several additions, such as different difficulties, score keeper and GUI. 
+Most noteable changes include:
 
  * simplified at several steps
  * made more rusty
- * diagonal checking was added to the AI logic implementation
- * implementation was changed from the follow-along tutorial to a more sophisticated setup,
- * several changes to the implementation
- * test added
+ * added diagonal checking to the AI logic implementation and altered next action choice of AI accordingly
+ * implementation was severly changed from the follow-along tutorial to a more sophisticated setup (e. g. one file -> lib, gui, main)
+ * several changes to the implementation (AI logic, checks, ...)
+ * tests added
  * added different difficulties
 
 ## Installation
